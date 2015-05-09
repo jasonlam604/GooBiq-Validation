@@ -1,0 +1,24 @@
+{
+    "name": "goobiq/validation",
+    "description": "Validation Component for GooBiq Lightweight PHP Framework",
+    "license": "MIT",
+    "homepage": "http://www.goobiqframework.com",
+    "authors": [
+        {
+            "name": "Jason Lam",
+            "email": "jasonlam604@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "goobiq/core": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "GooBiq\\": "src"
+        }
+    }
+}
