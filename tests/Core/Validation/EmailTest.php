@@ -1,16 +1,16 @@
 <?php
-
 use GooBiq\Core\Validation\Validator;
 use GooBiq\Core\Validation\Validators\EmailValidator;
 
 /**
  * EmailTest
- * 
+ *
  * @author Jason Lam
- * 
+ *        
  * @see Goobiq\Core\Validation\Validators\EmailValidator
  */
-class EmailTest extends PHPUnit_Framework_TestCase {
+class EmailTest extends PHPUnit_Framework_TestCase
+{
 
     public function testValidEmail()
     {
@@ -21,7 +21,7 @@ class EmailTest extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertTrue($validator->isValid());
     }
-    
+
     public function testInValidEmail()
     {
         $validator = new Validator();
@@ -29,7 +29,7 @@ class EmailTest extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertFalse($validator->isValid());
     }
-    
+
     public function testValidEmailMaxLength()
     {
         $val = new EmailValidator('jasonlam604@gmail.com');
@@ -39,7 +39,7 @@ class EmailTest extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertTrue($validator->isValid());
     }
-    
+
     public function testInValidEmailMaxLength()
     {
         $val = new EmailValidator('jasonlam604@gmail.com');
@@ -49,7 +49,7 @@ class EmailTest extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertFalse($validator->isValid());
     }
-    
+
     public function testValidEmailMinLength()
     {
         $val = new EmailValidator('xx@x.com');
@@ -59,7 +59,7 @@ class EmailTest extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertTrue($validator->isValid());
     }
-    
+
     public function testInValidEmailMinLength()
     {
         $val = new EmailValidator('x@x.com');

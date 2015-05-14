@@ -1,16 +1,16 @@
 <?php
-
 use GooBiq\Core\Validation\Validator;
 use GooBiq\Core\Validation\Validators\IPV6Validator;
 
 /**
  * IPV6Test
- * 
+ *
  * @author Jason Lam
- * 
+ *        
  * @see Goobiq\Core\Validation\Validators\IPV6Validator
  */
-class IPV6Test extends PHPUnit_Framework_TestCase {
+class IPV6Test extends PHPUnit_Framework_TestCase
+{
 
     public function testValidIPv6()
     {
@@ -19,7 +19,7 @@ class IPV6Test extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertTrue($validator->isValid());
     }
-    
+
     public function testInValidIPv6()
     {
         $validator = new Validator();
@@ -27,5 +27,4 @@ class IPV6Test extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertFalse($validator->isValid());
     }
-
 }

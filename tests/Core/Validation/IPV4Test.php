@@ -1,16 +1,16 @@
 <?php
-
 use GooBiq\Core\Validation\Validator;
 use GooBiq\Core\Validation\Validators\IPV4Validator;
 
 /**
  * IPV4Test
- * 
+ *
  * @author Jason Lam
- * 
+ *        
  * @see Goobiq\Core\Validation\Validators\IPV4Validator
  */
-class IPV4Test extends PHPUnit_Framework_TestCase {
+class IPV4Test extends PHPUnit_Framework_TestCase
+{
 
     public function testValidIPv4()
     {
@@ -19,7 +19,7 @@ class IPV4Test extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertTrue($validator->isValid());
     }
-    
+
     public function testInValidIPv4()
     {
         $validator = new Validator();
@@ -27,5 +27,4 @@ class IPV4Test extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertFalse($validator->isValid());
     }
-
 }

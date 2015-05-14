@@ -1,8 +1,8 @@
 <?php
 namespace GooBiq\Core\Validation\Validators;
 
-use GooBiq\Core\Exception\GooBiqCoreException;
-use GooBiq\Core\Exception\ExceptionCode;
+use GooBiq\Core\Validation\GooBiqValidationException;
+use GooBiq\Core\Validation\Validator;
 
 /**
  * LengthValidator
@@ -10,27 +10,7 @@ use GooBiq\Core\Exception\ExceptionCode;
  * @author Jason Lam <jasonlam604@gmail.com>
  * @copyright 2015 Jason Lam
  * @package /GooBiq/Core/Validation/Validators
- *         
- * @license MIT LICENSE
- *         
- *          Permission is hereby granted, free of charge, to any person obtaining
- *          a copy of this software and associated documentation files (the
- *          "Software"), to deal in the Software without restriction, including
- *          without limitation the rights to use, copy, modify, merge, publish,
- *          distribute, sublicense, and/or sell copies of the Software, and to
- *          permit persons to whom the Software is furnished to do so, subject to
- *          the following conditions:
- *         
- *          The above copyright notice and this permission notice shall be
- *          included in all copies or substantial portions of the Software.
- *         
- *          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- *          EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- *          MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- *          NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- *          LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
- *          OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
- *          WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * @license MIT LICENSE http://opensource.org/licenses/MIT
  */
 abstract class LengthValidator extends BaseValidator
 {
@@ -116,7 +96,7 @@ abstract class LengthValidator extends BaseValidator
         if (is_numeric($length) && $length > 0)
             $this->maxLength = $length;
         else
-            throw new GooBiqCoreException('Max length not a numeric value or not greater then 0', ExceptionCode::VALIDATION_INVALID_MAX_LENGTH);
+            throw new GooBiqValidationException('Max length not a numeric value or not greater then 0', Validator::VALIDATION_INVALID_MAX_LENGTH);
     }
 
     public function checkMinLength($length)
@@ -124,7 +104,7 @@ abstract class LengthValidator extends BaseValidator
         if (is_numeric($length) && $length > 0)
             $this->minLength = $length;
         else
-            throw new GooBiqCoreException('Min length not a numeric value or not greater then 0', ExceptionCode::VALIDATION_INVALID_MIN_LENGTH);
+            throw new GooBiqValidationException('Min length not a numeric value or not greater then 0', Validator::VALIDATION_INVALID_MIN_LENGTH);
     }
 
     public function checkExactLength($length)
@@ -132,6 +112,6 @@ abstract class LengthValidator extends BaseValidator
         if (is_numeric($length) && $length > 0)
             $this->exactLength = $length;
         else
-            throw new GooBiqCoreException('Exact length not matching', ExceptionCode::VALIDATION_INVALID_EXACT_LENGTH);
+            throw new GooBiqValidationException('Exact length not matching', Validator::VALIDATION_INVALID_EXACT_LENGTH);
     }
 }

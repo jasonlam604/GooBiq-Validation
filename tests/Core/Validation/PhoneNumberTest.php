@@ -1,16 +1,16 @@
 <?php
-
 use GooBiq\Core\Validation\Validator;
 use GooBiq\Core\Validation\Validators\PhoneNumberValidator;
 
 /**
  * PhoneNumberTest
- * 
+ *
  * @author Jason Lam
- * 
+ *        
  * @see Goobiq\Core\Validation\Validators\PhoneNumberValidator
  */
-class PhoneNumberTest extends PHPUnit_Framework_TestCase {
+class PhoneNumberTest extends PHPUnit_Framework_TestCase
+{
 
     public function testValidPhoneNumbers()
     {
@@ -21,8 +21,8 @@ class PhoneNumberTest extends PHPUnit_Framework_TestCase {
         
         $validator->validate();
         $this->assertTrue($validator->isValid());
-    }    
-    
+    }
+
     public function testInValidPhoneNumber1()
     {
         $validator = new Validator();
@@ -30,7 +30,7 @@ class PhoneNumberTest extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertFalse($validator->isValid());
     }
-    
+
     public function testInValidPhoneNumber2()
     {
         $validator = new Validator();
@@ -38,7 +38,7 @@ class PhoneNumberTest extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertFalse($validator->isValid());
     }
-    
+
     public function testInValidPhoneNumber3()
     {
         $validator = new Validator();
@@ -46,7 +46,7 @@ class PhoneNumberTest extends PHPUnit_Framework_TestCase {
         $validator->validate();
         $this->assertFalse($validator->isValid());
     }
-    
+
     public function testInValidPhoneNumber4()
     {
         $validator = new Validator();
