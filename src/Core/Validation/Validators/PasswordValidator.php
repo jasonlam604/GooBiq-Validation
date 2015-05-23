@@ -45,7 +45,7 @@ class PasswordValidator extends BaseValidator
             $this->validationPass();
         } else {
             if (empty($this->getErrorMessage()))
-                $this->setErrorMessage($this->getValue() . ' not a valid password');
+                $this->setErrorMessage('Not a valid password');
             $this->validationFailed();
         }
     }
