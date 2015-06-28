@@ -38,7 +38,7 @@ class URLValidator extends BaseValidator
            $this->options[self::$URL_KEY] = filter_var($this->options[self::$URL_KEY], FILTER_SANITIZE_URL);
         }
         
-        if(call_user_func_array(filter_var, $this->options)) {
+        if(call_user_func_array('filter_var', $this->options)) {
             $this->validationPass();
         } else {
             if (empty($this->getErrorMessage()))
