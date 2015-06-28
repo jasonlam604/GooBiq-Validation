@@ -1,8 +1,6 @@
 <?php
 namespace GooBiq\Core\Validation\Validators;
 
-use GooBiq\Core\Validation\Validators\LengthValidator;
-
 /**
  * PasswordValidator
  *
