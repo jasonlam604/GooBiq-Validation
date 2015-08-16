@@ -17,8 +17,14 @@ Current list of Validators are:
 * Email
 * IPv4
 * IPv6
+* Password
 * Phone Number
 * Regex
+* URL
+
+## Current Stable Release 
+
+Release v1.0.0
 
 ## Further Documentation and Framework Information
 
