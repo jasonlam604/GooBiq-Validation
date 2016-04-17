@@ -10,8 +10,6 @@ PHP Validation Library
 
 This is a class that assists with running a group of validators
 
-Available at
-
     GooBiq\Core\Validation\Validator.php
 
 Available Methods
