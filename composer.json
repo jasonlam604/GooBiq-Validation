@@ -1,8 +1,7 @@
 {
     "name": "goobiq/validation",
-    "description": "Validation Component for GooBiq Lightweight PHP Framework",
+    "description": "PHP Validation Library,
     "license": "MIT",
-    "homepage": "http://www.goobiqframework.com",
     "authors": [
         {
             "name": "Jason Lam",
@@ -10,7 +9,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0"
+        "php": ">=5.6.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.0.*"
