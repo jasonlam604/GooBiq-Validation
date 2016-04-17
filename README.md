@@ -1,4 +1,4 @@
-# [GooBiq-Validation Component for GooBiq Lightweight PHP Framework](http://www.goobiqframework.com)
+#GooBiq-Validation Library
 
 [![Build Status](https://travis-ci.org/jasonlam604/GooBiq-Validation.png)](https://travis-ci.org/jasonlam604/GooBiq-Validation)
 
@@ -283,11 +283,6 @@ available at GooBiq\Core\Validation\Validtors\BaseValidtor.php.  Best to illustr
 ## Current Stable Release 
 
 Release v1.0.0
-
-
-## Versioning
-
-GooBiq is maintained under [the Semantic Versioning guidelines](http://semver.org/).
 
 ## Creator
 
