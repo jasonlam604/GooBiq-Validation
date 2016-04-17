@@ -1,6 +1,6 @@
 {
     "name": "goobiq/validation",
-    "description": "PHP Validation Library"
+    "description": "PHP Validation Library",
     "license": "MIT",
     "authors": [
         {
